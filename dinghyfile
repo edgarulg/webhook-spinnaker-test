@@ -1,0 +1,15 @@
+{
+    "application": "eks-dinghytest",
+    "pipelines": [
+        {
+            "application": "eks-dinghytest",
+            "keepWaitingPipelines": false,
+            "limitConcurrent": true,
+            "name": "dinghyvalidation-tests",
+            "stages": [
+                {{ module "dinghy-modules/wait.stage.module" }}
+            ],
+            "triggers": []
+        }
+    ]
+}}
